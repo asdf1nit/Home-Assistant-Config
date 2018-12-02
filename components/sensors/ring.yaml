@@ -1,0 +1,14 @@
+---
+# Ring Doorbell settings
+#
+# The ring implementation allows you to integrate your Ring.com devices in Home Assistant.
+# https://www.home-assistant.io/components/ring/
+#
+
+platform: ring
+monitored_conditions:
+  - battery
+  - last_activity
+  - last_ding
+  - last_motion
+  - volume

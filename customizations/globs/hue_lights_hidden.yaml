@@ -1,0 +1,24 @@
+---
+# Hide hue lights from showign up when grouped
+#
+#
+
+# Study Lights
+"light.study_1":
+  hidden: true
+"light.study_2":
+  hidden: true
+  
+# Bedroom
+"light.group_for_wakeup":
+  hidden: true
+"light.bedroom":
+  hidden: true
+
+# Office
+"light.office":
+  hidden: true
+
+# Unused light
+"light.hue_white_lamp_4":
+  hidden: true

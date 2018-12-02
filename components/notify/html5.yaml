@@ -1,0 +1,11 @@
+---
+#
+# The html5 notification platform enables you to receive push notifications to Chrome or Firefox, no matter where you are in the world.
+#
+# https://www.home-assistant.io/components/notify.html5/
+#
+
+platform: html5
+name: hassio
+gcm_api_key: !secret gcmapikey
+gcm_sender_id: !secret gcmsenderid

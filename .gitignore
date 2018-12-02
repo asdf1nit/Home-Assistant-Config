@@ -1,0 +1,14 @@
+*.[oa]
+secrets.yaml
+known_devices.yaml
+html5_push_registrations.conf
+*.log
+*.db
+*.uuid
+*.pickle
+*.pyc
+/.cloud
+/.storage
+/.vscode
+/deps
+/tts

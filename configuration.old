@@ -1,0 +1,180 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: !secret home_elevation
+  # metric for Metric, imperial for Imperial
+  unit_system: imperial
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: America/Chicago
+  
+  # Load Packages
+  packages: !include_dir_named packages
+
+  
+# Enables the frontend
+frontend:
+  themes: !include_dir_merge_named themes
+# Enables configuration UI
+config:
+
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+http:
+  base_url: !secret hassio_url
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
+map:
+
+# Track the sun
+sun:
+
+# Video and Audio
+ffmpeg:
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+
+# Sensors
+sensor:
+  - platform: ring
+    monitored_conditions:
+      - battery
+      - last_activity
+      - last_ding
+      - last_motion
+      - volume
+  - platform: yr
+    name: Weather
+    forecast: 24
+    monitored_conditions:
+      - temperature
+
+# Binary Sensors      
+binary_sensor:
+  - platform: ring
+
+# Vera
+vera:
+  vera_controller_url: vara_url
+  exclude: [ 15, 64, 119, 62, 121, 32, 75 ]
+  lights: [3, 4, 5, 6 ]
+
+# Yamaha
+media_player:
+  - platform: yamaha
+    host: !secret yamaha_reciever_ip
+    source_names:
+      HDMI2: "ChromeCast"
+      HDMI5: "Channel Master"
+      AV2: "Bluetooth"
+# Sony TV
+  - platform: braviatv_psk
+    name: "Bedroom TV" 
+    host: !secret sony_tv_ip
+    psk: !secret sony_tv_psk
+    mac: !secret sony_mac
+    amp: false
+    android: True
+    sourcefilter:
+      - ' HD'
+      - HDMI
+
+# Ring
+ring:
+  username: !secret email
+  password: !secret ring
+
+# Text to speech
+tts:
+  - platform: google
+
+# Cloud
+cloud:
+
+# Enviaslink MOdule
+envisalink:
+  host: !secret host_ip
+  panel_type: !secret type
+  user_name: !secret user_name
+  password: !secret evl_backend
+  code: !secret code
+  port: !secret port
+  evl_version: !secret version
+  keepalive_interval: 60
+  zonedump_interval: 30
+  panic_type: Police
+  zones:
+    2:
+      name: 'Front Door'
+      type: 'opening'
+    3:
+      name: 'Back Door'
+      type: 'opening'
+    4:
+      name: 'Livign Room Motion'
+      type: 'motion'
+    1:
+      name: 'Master Motion'
+      type: 'motion'
+  partitions:
+    1:
+      name: 'Home Alarm'
+
+# Presence Detection
+device_tracker:
+  - platform: unifi_direct
+    host: !secret ap_ip_address
+    username: !secret unifiUser
+    password: !secret unifiPass
+    consider_home: 180
+
+# Google DNS
+google_domains:
+  domain: !secret hassio_domain
+  username: !secret googleUser
+  password: !secret googlePass
+
+# Google Push Notification
+notify:
+  - platform: html5
+    name: hassio
+    gcm_api_key: !secret gcmapikey
+    gcm_sender_id: !secret gcmsenderid
+
+# Cameras
+camera:
+  - platform: ring
+
+# IDE
+panel_iframe:
+  ide:
+    title: IDE
+    icon: mdi:code-braces
+    url: !secret panel_iframe_ide_url

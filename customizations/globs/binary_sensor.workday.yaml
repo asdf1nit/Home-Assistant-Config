@@ -1,0 +1,7 @@
+---
+# Hide the workday sensor
+#
+#
+
+"binary_sensor.workday":
+  hidden: true

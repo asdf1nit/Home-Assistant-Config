@@ -1,0 +1,56 @@
+title: Home
+
+background: center / cover no-repeat url("/local/background.jpg") fixed
+
+views:
+    # View tab title.
+  - title: Overview
+    panel: false
+    id: overview
+    # Makes the first card fill the view
+    cards:
+
+      - id: peoplehome # Every card needs an ID, if you don't specify one, it is added automatically.
+        type: entity-filter
+        entities:
+          - device_tracker.10f1f2839819
+          - device_tracker.f4f5248a3041
+        state_filter:
+          - 'home'
+        card:
+          type: glance
+          title: People
+
+      - id: alarmpanel
+        type: alarm-panel
+        title: House Alarm
+        entity: alarm_control_panel.home_alarm
+
+      - id: ring
+        type: picture-glance
+        title: Front Door
+        entities:
+          - binary_sensor.ring_front_door_motion
+          - binary_sensor.ring_front_door_ding
+        camera_image: camera.front_door
+
+
+      - id: thermostat
+        type: thermostat
+        entity: climate.thermostat_16
+
+  - title: Bedroom
+    panel: false
+    id: bderoom
+    cards:
+
+      - id: lights
+        type: horizontal-stack
+        cards:
+          - type: light
+            entity: light.bedroom
+          - type: light
+            entity: light.office
+
+  - title: Master Bedroom
+      

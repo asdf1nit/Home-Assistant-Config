@@ -1,0 +1,7 @@
+---
+# Ring Binary Sensor
+#
+# https://www.home-assistant.io/components/binary_sensor.ring/
+#
+
+platform: ring

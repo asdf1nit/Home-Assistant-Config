@@ -1,0 +1,25 @@
+---
+# Provides a list of entities to include in Google Assistant.
+#
+# https://www.nabucasa.com/config/google_assistant
+#
+
+exclude_entities:
+  - light.led
+  - light.hue_white_lamp_4
+  - light.office
+  - light.office_light
+  - light.bedroom
+  - light.study
+  - light.study_1
+  - light.study_2
+  - light.group_for_wakeup
+  - group.frontdoor
+  - group.people
+  - group.all_automations
+  - group.all_devices
+  - group.all_switches
+  - group.battery_alert
+  - media_player.channel_master_0851
+  - media_player.sony_tv
+  - media_player.yamaha_receiver

@@ -1,0 +1,36 @@
+---
+# 
+# Envisalink Alarm Control Panel
+# The envisalink component will allow Home Assistant users who own either a DSC or Honeywell alarm panel to
+# leverage their alarm system and its sensors to provide Home Assistant with rich information about their homes
+#
+# https://www.home-assistant.io/components/envisalink/
+#
+
+envisalink:
+  host: !secret host_ip
+  panel_type: !secret type
+  user_name: !secret user_name
+  password: !secret evl_backend
+  code: !secret code
+  port: !secret port
+  evl_version: !secret version
+  keepalive_interval: 60
+  zonedump_interval: 30
+  panic_type: Police
+  zones:
+    2:
+      name: 'Front Door'
+      type: 'opening'
+    3:
+      name: 'Back Door'
+      type: 'opening'
+    4:
+      name: 'Livign Room Motion'
+      type: 'motion'
+    1:
+      name: 'Master Motion'
+      type: 'motion'
+  partitions:
+    1:
+      name: 'Home Alarm'

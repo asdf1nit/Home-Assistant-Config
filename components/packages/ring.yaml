@@ -1,0 +1,11 @@
+---
+# 
+# The ring implementation allows you to integrate your Ring.com devices in Home Assistant.
+# https://www.home-assistant.io/components/ring/
+#
+# https://community.home-assistant.io/t/ring-doorbell/7943/248
+#
+
+ring:
+  username: !secret email
+  password: !secret ring

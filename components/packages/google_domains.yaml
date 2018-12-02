@@ -1,0 +1,10 @@
+---
+# Google DDNS 
+# With the Google Domains component you can keep your Google Domains record up to date.
+#
+# https://www.home-assistant.io/components/google_domains/
+
+google_domains:
+  domain: !secret hassio_domain
+  username: !secret googleUser
+  password: !secret googlePass

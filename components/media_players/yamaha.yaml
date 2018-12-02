@@ -1,0 +1,13 @@
+---
+# Yahama Reciever
+# The yamaha platform allows you to control Yamaha Network Receivers from Home Assistant.
+#
+# https://www.home-assistant.io/components/media_player.yamaha/
+#
+
+platform: yamaha
+host: !secret yamaha_reciever_ip
+source_names:
+  HDMI2: "ChromeCast"
+  HDMI5: "Channel Master"
+  AV2: "Bluetooth"

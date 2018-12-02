@@ -1,0 +1,10 @@
+---
+# Switches, Lights (inc Dimmers), Locks, Sensors, Binary sensors,
+# and Scenes are supported - and will be automatically added when HA connects to your Vera controller.
+#
+# https://www.home-assistant.io/components/vera/
+#
+vera: 
+  vera_controller_url: !secret vera_url
+  exclude: [ 15, 64, 119, 62, 121, 32, 75 ]
+  lights: [3, 4, 5, 6 ]

@@ -1,0 +1,15 @@
+---
+# Hide vera scenes
+#
+#
+
+"scene.5pm_temp":
+  hidden: true
+"scene.630pm_temp":
+  hidden: true
+"scene.745pm_temp":
+  hidden: true
+"scene.8am_temp":
+  hidden: true
+"scene.9pm_temp":
+  hidden: true

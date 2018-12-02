@@ -1,0 +1,10 @@
+alias: master_motion_lights_on
+trigger:
+  platform: state
+  entity_id: binary_sensor.master_motion
+  to: 'on'
+action:
+  service: light.turn_on
+  data:
+    entity_id:
+      - light.master_light

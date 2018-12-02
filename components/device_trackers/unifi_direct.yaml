@@ -1,0 +1,13 @@
+---
+# Unifi Device tracker 
+# This platform allows you to detect presence by looking at devices connected to a UniFi AP. 
+# This device tracker differs form Ubiquiti Unifi WAP because it doesn’t require the Unifi controller software
+#
+# https://www.home-assistant.io/components/device_tracker.unifi_direct/
+#
+
+platform: unifi_direct
+host: !secret ap_ip_address
+username: !secret unifiUser
+password: !secret unifiPass
+consider_home: 180
