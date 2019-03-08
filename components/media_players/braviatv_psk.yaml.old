@@ -12,6 +12,6 @@ psk: !secret sony_psk
 mac: !secret sony_mac_address
 amp: false
 android: True
-#sourcefilter:
-#  - ' HD'
-#  - HDMI
+sourcefilter:
+  - ' HD'
+  - HDMI

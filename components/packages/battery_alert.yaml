@@ -102,6 +102,12 @@ automation:
           {%- for domain in domains if battery_level(domain) |trim != ""-%}
           {{ battery_level(domain) }}{%- if not loop.last %}, {% endif -%}
           {%- endfor -%}
+    - service: notify.hassio
+      data_template:
+        message: "Low Battery on Ring Camera"
+      data:
+        data:
+          tag: 'notification-about-sensor'
     - service: notify.slack_notify
       data_template:
         message: "Low Battery Levels"
@@ -124,10 +130,9 @@ automation:
               {%- for domain in domains if battery_level(domain) |trim != ""-%}
               {{ battery_level(domain) }}{%- if not loop.last %}, {% endif -%}
               {%- endfor -%}
-
 - alias: battery_alert_clear
   trigger:
-    - platform: time
+    - platform: time_pattern
       minutes: '/30'
       seconds: 00
   condition:

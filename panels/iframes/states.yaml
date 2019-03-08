@@ -6,7 +6,7 @@
 #
 # https://bonani.tech/lovelace-accessing-home-assistant-states-page-with-just-one-click/
 #
-states:
-  title: States
-  icon: mdi:home-assistant
-  url: !secret panel_iframe_states_url
+#states:
+#  title: States
+#  icon: mdi:home-assistant
+#  url: !secret panel_iframe_states_url

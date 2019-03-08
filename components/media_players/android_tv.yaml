@@ -1,0 +1,15 @@
+---
+# Custom Android TV Media Player
+#
+#
+# https://community.home-assistant.io/t/native-support-for-android-tv-android-devices/82792/72
+#
+
+platform: androidtv
+name: Bedroom TV
+host: 10.0.1.7
+adb_server_ip: 127.0.0.1
+apps:
+  "amazon": "Amazon Premium Video"
+  "netflix" : "Netflix"
+  "kodi": "Kodi"
