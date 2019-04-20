@@ -1,0 +1,16 @@
+---
+# The panel for VS Code
+#
+#
+#
+#
+
+name: "VS Code"
+sidebar_title: "VS Code"
+sidebar_icon: mdi:wrench
+js_url: /api/hassio/app/entrypoint.js
+url_path: hassio/ingress/a0d7b954_vscode
+embed_iframe: true
+require_admin: true
+config:
+  ingress: core_configurator

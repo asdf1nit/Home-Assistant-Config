@@ -7,7 +7,7 @@
 
 platform: androidtv
 name: Bedroom TV
-host: 10.0.1.7
+host: !secret sony_tv_ip
 adb_server_ip: 127.0.0.1
 apps:
   "amazon": "Amazon Premium Video"

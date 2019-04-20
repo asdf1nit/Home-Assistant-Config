@@ -5,3 +5,5 @@
 # https://www.home-assistant.io/components/config/
 #
 config:
+
+system_health:
