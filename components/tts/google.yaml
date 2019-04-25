@@ -2,4 +2,4 @@
 # The Google tts platform
 #
 #
-platform: google
+platform: google_translate
