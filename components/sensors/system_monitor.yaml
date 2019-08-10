@@ -1,0 +1,15 @@
+---
+# System Monitor Sensor
+#
+# https://www.home-assistant.io/components/systemmonitor/
+#
+
+platform: systemmonitor
+resources:
+  - type: disk_use_percent
+    arg: /home
+  - type: memory_free
+  - type: processor_use
+  - type: last_boot
+  - type: network_in
+    arg: enp4s0
