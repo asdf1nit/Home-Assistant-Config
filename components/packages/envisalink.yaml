@@ -12,7 +12,7 @@ envisalink:
   panel_type: !secret type
   user_name: !secret user_name
   password: !secret evl_backend
-  code: !secret code
+  #code: !secret code
   port: !secret port
   evl_version: !secret version
   keepalive_interval: 60
