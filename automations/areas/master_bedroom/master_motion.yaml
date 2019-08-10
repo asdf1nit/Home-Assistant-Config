@@ -1,10 +1,27 @@
-alias: master_motion_lights_on
+alias: Master Lights Automation
 trigger:
   platform: state
   entity_id: binary_sensor.master_motion
   to: 'on'
+condition:
+  condition: and
+  conditions:
+      -  condition: sun
+         after: sunrise
+         after_offset: 1:00:00
+      -  condition: sun
+         before: sunset
+         before_offset: 1:00:00
+      -  condition: state
+         entity_id: light.master_light
+         state: 'off'
 action:
-  service: light.turn_on
-  data:
-    entity_id:
-      - light.master_light
+  -  service: light.turn_on
+     data:
+      entity_id:
+        - light.master_light
+  -  delay: 0:30
+  -  service: light.turn_off
+     data:
+       entity_id:
+         -  light.master_light
