@@ -13,7 +13,11 @@ homeassistant:
   
   # Load Packages
   packages: !include_dir_named components/packages
-
+hacs:
+  token: 1d53d968a0f2718c06c6190d581bf5b0325466c4
+  sidepanel_title: hacs
+  sidepanel_icon: "mdi:github-face"
+  theme: True
   
 # Frontend Basic Automations
 #automation: !include automations.yaml

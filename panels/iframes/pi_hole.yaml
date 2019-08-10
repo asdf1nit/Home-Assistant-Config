@@ -1,0 +1,11 @@
+#
+# Custom Panel for pi hole
+#
+#
+#
+
+
+pihole:
+  title: Pi-hole
+  icon: mdi:block-helper
+  url: !secret pi_hole_address
