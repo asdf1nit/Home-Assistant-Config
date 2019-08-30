@@ -3,7 +3,7 @@ secrets.yaml
 known_devices.yaml
 html5_push_registrations.conf
 *.log
-*.db
+*.db*
 *.uuid
 *.pickle
 *.pyc
@@ -13,3 +13,5 @@ html5_push_registrations.conf
 /deps
 /tts
 /.Trash-0
+ip_bans.yaml
+/core
