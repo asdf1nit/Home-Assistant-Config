@@ -8,3 +8,4 @@ google_domains:
   domain: !secret hassio_domain
   username: !secret googleUser
   password: !secret googlePass
+  timeout: 30
