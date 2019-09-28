@@ -1,0 +1,9 @@
+---
+#
+# This will enable the stream component in lovelace
+#
+#
+#  https://www.home-assistant.io/components/stream/#streaming-in-lovelace
+#
+
+stream:
