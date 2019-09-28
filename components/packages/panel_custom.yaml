@@ -7,4 +7,4 @@
 # This configration loads up all my panels
 #
 #
-panel_custom: !include_dir_merge_named ../../panels/custom
+#panel_custom: !include_dir_merge_named ../../panels/custom
