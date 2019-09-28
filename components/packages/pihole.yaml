@@ -1,0 +1,12 @@
+---
+#
+# https://www.home-assistant.io/components/pi_hole/
+#
+# The pi_hole integration allows you to retrieve and display statistics from a single Pi-hole system
+
+
+# Example configuration.yaml entry
+pi_hole:
+  host: localhost:4865
+  ssl: true
+  verify_ssl: false
