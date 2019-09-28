@@ -1,0 +1,14 @@
+---
+#
+# https://community.home-assistant.io/t/custom-component-hacs/121727
+#
+# Manage (Install, track, upgrade) and discover custom elements for Home Assistant directly from the UI.
+#
+#
+#
+
+hacs:
+  token: !secret hacs
+  sidepanel_title: Community
+  sidepanel_icon: "mdi:github-face"
+  theme: True
