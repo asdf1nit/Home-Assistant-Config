@@ -16,7 +16,8 @@ This is a work in progress as all home automation platforms usualy are. I haven'
 5. Started usign MQTT, grafana, and InfluxDB for nice graphs
 6. Using unifi cameras
 
- Over all things have come along nice and this is a great platform to work with. I still have many things
+ Over all things have come along nice and this is a great platform to work with. I still have many things left that need to be done
+ 
 Things I want to do
 - [] Reconfigure my folder structure to make things a little cleaner
 - [] Document more of my config and the devices I use
