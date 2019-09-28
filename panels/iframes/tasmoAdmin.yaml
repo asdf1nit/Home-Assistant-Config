@@ -1,0 +1,11 @@
+---
+#
+# TasmoAdmin (formerly known as SonWEB) is an administrative web interface to manage all your Sonoff-Tasmota flashed devices centrally.
+#
+# https://community.home-assistant.io/t/community-hass-io-add-on-tasmoadmin/54155
+#
+
+tasmoadmin:
+  title: TasmoAdmin
+  icon: mdi:lightbulb-on
+  url:  !secret tasmo
