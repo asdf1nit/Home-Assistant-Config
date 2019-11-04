@@ -1,6 +1,6 @@
 frontdoor:
   view: false
-  name: "Front Door"
+  name: "Ring Front Door"
   icon: mdi:home
   entities:
     - sensor.ring_front_door_battery
@@ -18,3 +18,18 @@ people:
   entities:
     - device_tracker.10f1f2839819
     - device_tracker.f4f5248a3041
+
+pihole:
+  name: "Pi Hole Status"
+  entities:
+    - sensor.pihole_status
+    - script.enable_pihole
+    - input_select.pihole_time
+    - sensor.pihole_ads_blocked_today
+    - sensor.pihole_ads_percentage_blocked_today
+    - sensor.pihole_dns_queries_cached
+    - sensor.pihole_dns_queries_forwarded
+    - sensor.pihole_dns_queries_today
+    - sensor.pihole_dns_unique_clients
+    - sensor.pihole_dns_unique_domains
+    - sensor.pihole_domains_blocked

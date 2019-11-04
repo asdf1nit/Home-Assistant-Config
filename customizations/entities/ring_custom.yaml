@@ -1,0 +1,11 @@
+---
+#
+#
+# Custom names for ring components
+#
+#
+#
+#
+
+camera.front_door:
+  friendly_name: Ring Front Door Camera
