@@ -9,3 +9,4 @@ tasmoadmin:
   title: TasmoAdmin
   icon: mdi:lightbulb-on
   url:  !secret tasmo
+  require_admin: true
