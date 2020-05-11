@@ -55,3 +55,6 @@ darkblue:
   # Table row
   table-row-background-color: var(--primary-background-color)
   table-row-alternative-background-color: var(--secondary-background-color)
+  mdc-data-table__cell: var(--primary-background-color)
+  mdc-data-table: var(--primary-background-color)
+  mdc-data-table__table: "#2F7EFD"

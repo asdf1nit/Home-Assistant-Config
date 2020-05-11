@@ -15,3 +15,5 @@ html5_push_registrations.conf
 /.Trash-0
 ip_bans.yaml
 /core
+/custom_components/hacs
+

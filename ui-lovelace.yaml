@@ -23,7 +23,6 @@ views:
 
       - id: alarmpanel
         type: alarm-panel
-        title: House Alarm
         entity: alarm_control_panel.home_alarm
         states:
           - arm_home

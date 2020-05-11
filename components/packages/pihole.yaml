@@ -7,6 +7,6 @@
 
 # Example configuration.yaml entry
 pi_hole:
-  host: localhost:4865
+  host: https://10.0.1.13:4865
   ssl: true
   verify_ssl: false

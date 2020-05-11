@@ -3,4 +3,7 @@
 #
 # https://www.home-assistant.io/docs/automation/
 #
-automation: !include_dir_list ../../automations
+automation old: !include_dir_list ../../automations
+
+# include automations from the gui
+automation: !include ../../automations.yaml
